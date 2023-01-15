@@ -13,7 +13,7 @@ namespace calculator_WinUI
     public class Operator
     {
         private readonly char Notation;
-        private static readonly List<char> AcceptNotations = new List<char>() { '+', '-', '*', '/' };
+        private static readonly List<char> AcceptNotations = new() { '+', '-', '*', '/' };
 
         public Operator(char notation)
         {
@@ -102,7 +102,7 @@ namespace calculator_WinUI
         private readonly DataContext ParentDataContext;
         private readonly Type ParentDataContextType;
         public bool Calculated { get; private set; } = false;
-        private ExpressionElementCollection ExpressionElements = new();
+        private readonly ExpressionElementCollection ExpressionElements = new();
 
         /// <summary>
         /// Calculator class's generator
